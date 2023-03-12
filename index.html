@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yamyamdrawing</title>
+    <link rel="stylesheet" href="style_em.css">
+</head>
+<body>
+    <div id="header">
+        <img src="KakaoTalk_20230304_192523275.png" alt="">
+        <p id="yamlogo">yamyamdrawing</p>
+    </div>
+    <div id="main_display">
+        <div class="tools">
+            <ul>
+                <li>
+                    <button id="drawing" class="tool">
+                        🖊
+                        <span class="tooltip">Pen(Q)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="brush" class="tool">
+                        🖌
+                        <span class="tooltip">Brush(W)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="eraser" class="tool">
+                        ✏
+                        <span class="tooltip">Eraser(E)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="squre" class="tool">
+                        □
+                        <span class="tooltip">Squre(A)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="triangle" class="tool">
+                        △
+                        <span class="tooltip">Triangle(S)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="circle" class="tool">
+                        ○
+                        <span class="tooltip">Circle(D)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="return_button" class="tool">
+                        ↩
+                        <span class="tooltip">Undo(Crtl+Z)</span>
+                    </button>
+                </li>
+                <li>
+                    <button id="reset" class="tool">
+                        🗑
+                        <span class="tooltip">Delete(delete)</span>
+                    </button>
+                </li>
+            </ul>
+            <div class='files'>
+                <input type="file" accept="imange/*" id='file' class="tool"/>
+                <label for="file">📂</label>
+                <button id="save">💾</button>
+            </div>
+        </div>
+        <main>
+            <canvas></canvas>
+        </main>
+        <div class="tools_sett">
+            <div class="container">
+                <input type="color" id="text_color" />
+                <label for="color" class="color_tool">color</label>
+                <input type="color" id="background_color" value="#ffffff"/>
+                <label for="background_color" class="color_tool">backgroundcolor</label>
+            </div>
+            <div class='ranges'>
+                <div id="canvas_range">
+                    <input type="text" id="canvas_width" value="800">
+                    X
+                    <input type="text" id="canvas_height" value="800">
+                    <label for="canvas_range" class="range_tool">Canvas</label>
+                </div>
+                    <div id="size_box"><input type="range" id="line_width" min="1" max="10" value="5" step="0.1"/>
+                    <label for="line_width" class="range_tool">size</label></div>
+            </div>
+            <div id='text_tool'>
+                <input type="text" placeholder="  double click on canvas" id="text" />
+                <label for="text" id='font_button'>▼</label>
+                <ul id='font_lists'>
+                    <li class='font_list' id='sans_font'>sans-serif</li>
+                    <li class='font_list' id='mono_font'>monospace</li>
+                    <li class='font_list' id='serif_font'>serif</li>
+                    <li class='font_list' id='malang_font'>malang</li>
+                </ul>
+            </div>
+            <div id="yamsign">@yamyamssi</p>
+            </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
