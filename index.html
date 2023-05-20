@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yamyamdrawing</title>
     <link rel="stylesheet" href="style_em.css">
+    <title>yamyamdrawing</title>
 </head>
 <body>
-    <div id="header">
-        <img src="KakaoTalk_20230304_192523275.png" alt="">
+    <header id="header">
+        <img src="yamyamIcon.png" alt="">
         <p id="yamlogo">yamyamdrawing</p>
-    </div>
+    </header>
     <div id="main_display">
-        <div class="tools">
+        <aside class="tools">
             <ul>
                 <li>
                     <button id="drawing" class="tool">
@@ -34,7 +34,7 @@
                     </button>
                 </li>
                 <li>
-                    <button id="squre" class="tool">
+                    <button id="square" class="tool">
                         □
                         <span class="tooltip">Squre(A)</span>
                     </button>
@@ -64,16 +64,16 @@
                     </button>
                 </li>
             </ul>
-            <div class='files'>
-                <input type="file" accept="imange/*" id='file' class="tool"/>
-                <label for="file">📂</label>
-                <button id="save">💾</button>
-            </div>
-        </div>
+            <ul class='files'>
+                <li><input type="file" accept="imange/*" id='file'/></li>
+                <li><label for="file">📂</label></li>
+                <li><button id="save">💾</button></li>
+            </ul>
+        </aside>
         <main>
             <canvas></canvas>
         </main>
-        <div class="tools_sett">
+        <aside class="tools_sett">
             <div class="container">
                 <input type="color" id="text_color" />
                 <label for="color" class="color_tool">color</label>
@@ -101,7 +101,7 @@
                 </ul>
             </div>
             <div id="yamsign">@yamyamssi</p>
-            </div>
+            </aside>
     </div>
     <script src="app.js"></script>
 </body>
